@@ -47,3 +47,13 @@ Additional GUI panels that might be worth adding:
  - `accordion`
  - `chart`
  - `dialog` or `window`
+
+---
+
+Release Notes
+-------------
+
+### master
+
+ - Added `money` field type.
+ - Added test page.
