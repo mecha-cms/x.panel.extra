@@ -16,30 +16,158 @@ function panel__extra($_) {
                                 'description' => 'These field types are available in the core control panel extension.',
                                 'type' => 'fields',
                                 'lot' => [
-                                    0 => [
-                                        'title' => 'Text',
-                                        'type' => 'text',
-                                        'name' => 'test[text]',
-                                        'stack' => 10
+                                    'blob' => [
+                                        'title' => 'Blob',
+                                        'type' => 'blob',
+                                        'name' => 'default[blob]'
                                     ],
-                                    1 => [
+                                    'blobs' => [
+                                        'title' => 'Blobs',
+                                        'type' => 'blobs',
+                                        'name' => 'default[blobs]'
+                                    ],
+                                    'color' => [
+                                        'title' => 'Color',
+                                        'type' => 'color',
+                                        'value' => '#f00'
+                                    ],
+                                    'colors' => [
+                                        'title' => 'Colors',
+                                        'type' => 'colors',
+                                        'lot' => ['#f00', '#0f0', '#00f'],
+                                        'sort' => false
+                                    ],
+                                    'combo' => [
+                                        'title' => 'Combo',
+                                        'type' => 'combo',
+                                        'lot' => [
+                                            1 => 'Item 1',
+                                            2 => 'Item 2',
+                                            3 => [
+                                                'title' => 'Item 3',
+                                                'value' => 'value:3'
+                                            ],
+                                            4 => [
+                                                'title' => 'Item 4',
+                                                'lot' => [
+                                                    '4.1' => 'Item 4.1',
+                                                    '4.2' => 'Item 4.2',
+                                                    '4.3' => [
+                                                        'title' => 'Item 4.3',
+                                                        'value' => 'value:4.3'
+                                                    ]
+                                                ]
+                                            ]
+                                        ]
+                                    ],
+                                    'content' => [
                                         'title' => 'Content',
                                         'type' => 'content',
-                                        'name' => 'test[content]',
-                                        'stack' => 20
+                                        'name' => 'default[content]'
                                     ],
-                                    2 => [
-                                        'title' => 'Source',
-                                        'type' => 'source',
-                                        'name' => 'test[source]',
-                                        'stack' => 30
+                                    'date' => [
+                                        'title' => 'Date',
+                                        'type' => 'date',
+                                        'name' => 'default[date]'
                                     ],
-                                    3 => [
+                                    'date-time' => [
+                                        'title' => 'Date/Time',
+                                        'type' => 'date-time',
+                                        'name' => 'default[date-time]'
+                                    ],
+                                    'email' => [
+                                        'title' => 'Email',
+                                        'type' => 'email',
+                                        'name' => 'default[email]'
+                                    ],
+                                    'hidden' => [
+                                        'title' => 'Hidden',
+                                        'type' => 'hidden',
+                                        'name' => 'default[hidden]'
+                                    ],
+                                    'item' => [
+                                        'title' => 'Item',
+                                        'type' => 'item',
+                                        'name' => 'default[item]',
+                                        'lot' => [
+                                            1 => 'Item 1',
+                                            2 => 'Item 2',
+                                            3 => 'Item 3'
+                                        ],
+                                        'value' => 2
+                                    ],
+                                    'items' => [
+                                        'title' => 'Items',
+                                        'type' => 'items',
+                                        'name' => 'default[items]',
+                                        'lot' => [
+                                            1 => 'Item 1',
+                                            2 => 'Item 2',
+                                            3 => 'Item 3'
+                                        ],
+                                        'value' => [
+                                            2 => true,
+                                            3 => true
+                                        ]
+                                    ],
+                                    'link' => [
                                         'title' => 'Link',
                                         'type' => 'link',
-                                        'name' => 'test[link]',
-                                        'stack' => 40
+                                        'name' => 'default[link]'
                                     ],
+                                    'number' => [
+                                        'title' => 'Number',
+                                        'type' => 'number',
+                                        'name' => 'default[number]'
+                                    ],
+                                    'pass' => [
+                                        'title' => 'Pass',
+                                        'type' => 'pass',
+                                        'name' => 'default[pass]'
+                                    ],
+                                    'query' => [
+                                        'title' => 'Query',
+                                        'type' => 'query',
+                                        'name' => 'default[query]'
+                                    ],
+                                    'range' => [
+                                        'title' => 'Range',
+                                        'type' => 'range',
+                                        'name' => 'default[range]',
+                                        'range' => [0, 100]
+                                    ],
+                                    'set' => [
+                                        'title' => 'Set',
+                                        'description' => 'Example field set.',
+                                        'type' => 'set',
+                                        'content' => ""
+                                    ],
+                                    'source' => [
+                                        'title' => 'Source',
+                                        'type' => 'source',
+                                        'name' => 'default[source]'
+                                    ],
+                                    'text' => [
+                                        'title' => 'Text',
+                                        'type' => 'text',
+                                        'name' => 'default[text]'
+                                    ],
+                                    'time' => [
+                                        'title' => 'Time',
+                                        'type' => 'time',
+                                        'name' => 'default[time]'
+                                    ],
+                                    'toggle' => [
+                                        'title' => 'Toggle',
+                                        'hint' => 'Toggle hint.',
+                                        'type' => 'toggle',
+                                        'name' => 'default[toggle]'
+                                    ],
+                                    'u-r-l' => [
+                                        'title' => 'URL',
+                                        'type' => 'u-r-l',
+                                        'name' => 'default[u-r-l]'
+                                    ]
                                 ],
                                 'stack' => 10
                             ]
@@ -57,7 +185,7 @@ function panel__extra($_) {
                                         'title' => 'Money',
                                         'type' => 'money',
                                         'currency' => 'USD',
-                                        'name' => 'test[money]',
+                                        'name' => 'default[money]',
                                         'state' => ['join' => '.'],
                                         'stack' => 10
                                     ]
