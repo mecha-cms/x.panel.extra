@@ -181,13 +181,21 @@ function panel__extra($_) {
                                 'description' => 'These field types are not available in the core control panel extension.',
                                 'type' => 'fields',
                                 'lot' => [
-                                    0 => [
+                                    'data' => [
+                                        'title' => 'Data',
+                                        'type' => 'data',
+                                        'values' => [
+                                            ['name' => 'Anna', 'age' => 16, 'sex' => 'Female'],
+                                            ['name' => 'John', 'age' => 30, 'sex' => 'Male'],
+                                            ['name' => 'Ron', 'age' => 22, 'sex' => 'Male']
+                                        ]
+                                    ],
+                                    'money' => [
                                         'title' => 'Money',
                                         'type' => 'money',
                                         'currency' => 'USD',
                                         'name' => 'default[money]',
-                                        'state' => ['join' => '.'],
-                                        'stack' => 10
+                                        'state' => ['join' => '.']
                                     ]
                                 ],
                                 'stack' => 10
