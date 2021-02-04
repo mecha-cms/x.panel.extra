@@ -34,26 +34,27 @@ This extension aims to provide various types of fields to handle complex data by
 
 Several types of fields planned to be realized are:
 
- - `asset`
- - `code-mirror` (will be available as a separate extension)
- - `country`
- - `matrix`
- - `money`
- - `list`
- - `sortable`
+ - [ ] `asset`
+ - [ ] `code-mirror` (will be available as a separate extension)
+ - [ ] `country`
+ - [ ] `list`
+ - [ ] `matrix`
+ - [x] `money`
+ - [ ] `sortable`
+ - [x] `table`
 
 Additional GUI panels that might be worth adding:
 
- - `accordion`
- - `chart`
- - `dialog` or `window`
+ - [ ] `accordion`
+ - [ ] `chart`
+ - [ ] `dialog` or `window`
 
 ---
 
 Release Notes
 -------------
 
-### master
+### main
 
+ - Added `table` type.
  - Added `money` field type.
- - Added test page.
