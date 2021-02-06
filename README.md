@@ -45,7 +45,7 @@ Several types of fields planned to be realized are:
 Additional GUI panels that might be worth adding:
 
  - [ ] `accordion`
- - [ ] `chart`
+ - [x] [`chart`](https://github.com/mecha-cms/x.panel.type.chart)
  - [ ] `dialog` or `window`
  - [x] `table`
 
