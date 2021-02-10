@@ -26,6 +26,112 @@ namespace _\lot\x\panel\route {
 }
 
 namespace _\lot\x\panel\route\__test {
+    function blocks($_) {
+        $_['title'] = 'Blocks';
+        $_['lot']['desk']['lot']['form']['lot'][1] = [
+            'type' => 'section',
+            'lot' => [
+                'title-0' => [
+                    'type' => 'title',
+                    'level' => 0,
+                    'content' => 'Title 0',
+                    'stack' => 2
+                ],
+                'title-1' => [
+                    'type' => 'title',
+                    'level' => 1,
+                    'content' => 'Title 1',
+                    'stack' => 3
+                ],
+                'title-2' => [
+                    'type' => 'title',
+                    'level' => 2,
+                    'content' => 'Title 2',
+                    'stack' => 3
+                ],
+                'title-3' => [
+                    'type' => 'title',
+                    'level' => 3,
+                    'content' => 'Title 3',
+                    'stack' => 4
+                ],
+                'title-4' => [
+                    'type' => 'title',
+                    'level' => 4,
+                    'content' => 'Title 4',
+                    'stack' => 5
+                ],
+                'title-5' => [
+                    'type' => 'title',
+                    'level' => 5,
+                    'content' => 'Title 5',
+                    'stack' => 6
+                ],
+                'title-6' => [
+                    'type' => 'title',
+                    'level' => 6,
+                    'content' => 'Title 6',
+                    'stack' => 7
+                ],
+                'separator' => [
+                    'type' => 'separator',
+                    'stack' => 8
+                ],
+                'content' => [
+                    'title' => 'Content',
+                    'description' => 'Description goes here.',
+                    'type' => 'content',
+                    'content' => '<p>Content goes here.</p>',
+                    'tags' => ['mt:1' => true],
+                    'stack' => 10
+                ],
+                'section-1' => [
+                    'title' => 'Section 1',
+                    'description' => 'Description goes here.',
+                    'type' => 'section',
+                    'content' => '<p>Content goes here.</p>',
+                    'stack' => 20
+                ],
+                'section-2' => [
+                    'title' => 'Section 2',
+                    'description' => 'Description goes here.',
+                    'type' => 'section',
+                    'content' => '<p>Content goes here.</p>',
+                    'stack' => 30
+                ],
+                'tabs' => [
+                    'title' => 'Tabs',
+                    'description' => 'Description goes here.',
+                    'type' => 'tabs',
+                    'lot' => [
+                        'tab-1' => [
+                            'title' => 'Tab 1',
+                            'content' => '<p>Content of the first tab.</p>',
+                            'stack' => 10
+                        ],
+                        'tab-2' => [
+                            'title' => 'Tab 2',
+                            'content' => '<p>Content of the second tab.</p>',
+                            'stack' => 20
+                        ],
+                        'tab-3' => [
+                            'active' => false,
+                            'title' => 'Tab 3',
+                            'content' => '<p>Content of the third tab.</p>',
+                            'stack' => 30
+                        ],
+                        'tab-4' => [
+                            'title' => 'Tab 4',
+                            'link' => 'https://example.com',
+                            'stack' => 40
+                        ]
+                    ],
+                    'stack' => 40
+                ]
+            ]
+        ];
+        return $_;
+    }
     function fields($_) {
         $_['title'] = 'Fields';
         $_['lot']['desk']['lot']['form']['lot'][1] = [
@@ -100,6 +206,11 @@ namespace _\lot\x\panel\route\__test {
                                             'title' => 'Date/Time',
                                             'type' => 'date-time',
                                             'name' => 'default[date-time]'
+                                        ],
+                                        'description' => [
+                                            'title' => 'Description',
+                                            'type' => 'description',
+                                            'name' => 'default[description]'
                                         ],
                                         'email' => [
                                             'title' => 'Email',
@@ -182,6 +293,11 @@ namespace _\lot\x\panel\route\__test {
                                             'title' => 'Time',
                                             'type' => 'time',
                                             'name' => 'default[time]'
+                                        ],
+                                        'title' => [
+                                            'title' => 'Title',
+                                            'type' => 'title',
+                                            'name' => 'default[title]'
                                         ],
                                         'toggle' => [
                                             'title' => 'Toggle',
