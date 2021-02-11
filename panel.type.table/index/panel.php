@@ -20,4 +20,3 @@ function table(array $value, $key) {
     $out .= '</table>';
     return $out;
 }
-

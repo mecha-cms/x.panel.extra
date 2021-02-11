@@ -7,7 +7,6 @@ function bar($_) {
             'type' => 'bar',
             'lot' => [
                 'bar-0' => [
-                    'type' => 'bar/menu',
                     'lot' => [
                         'menu-0' => [
                             'title' => 'Menu 1',
@@ -22,6 +21,53 @@ function bar($_) {
                         'menu-2' => [
                             'title' => 'Menu 3',
                             'url' => '/',
+                            'lot' => [
+                                'menu-2-0' => [
+                                    'title' => 'Menu 3.1',
+                                    'url' => '/',
+                                    'stack' => 10
+                                ],
+                                'menu-2-1' => [
+                                    'title' => 'Menu 3.2',
+                                    'url' => '/',
+                                    'lot' => [
+                                        'menu-2-1-0' => [
+                                            'title' => 'Menu 3.2.1',
+                                            'description' => 'Default.',
+                                            'url' => '/',
+                                            'stack' => 10
+                                        ],
+                                        'menu-2-1-1' => [
+                                            'current' => true,
+                                            'title' => 'Menu 3.2.2',
+                                            'description' => 'Current.',
+                                            'url' => '/',
+                                            'stack' => 20
+                                        ],
+                                        'menu-2-1-2' => [
+                                            'active' => false,
+                                            'title' => 'Menu 3.2.3',
+                                            'description' => 'Disabled.',
+                                            'url' => '/',
+                                            'stack' => 30
+                                        ],
+                                        'menu-2-1-3' => [
+                                            'active' => false,
+                                            'current' => true,
+                                            'title' => 'Menu 3.2.4',
+                                            'description' => 'Current, disabled.',
+                                            'url' => '/',
+                                            'stack' => 40
+                                        ]
+                                    ],
+                                    'stack' => 20
+                                ],
+                                'menu-2-2' => [
+                                    'title' => 'Menu 3.3',
+                                    'url' => '/',
+                                    'stack' => 30
+                                ],
+                            ],
                             'stack' => 30
                         ]
                     ],
@@ -34,7 +80,6 @@ function bar($_) {
             'type' => 'bar',
             'lot' => [
                 'bar-0' => [
-                    'type' => 'bar/menu',
                     'lot' => [
                         'menu-0' => [
                             'title' => 'Menu 1',
@@ -60,6 +105,44 @@ function bar($_) {
                 ]
             ],
             'stack' => 20
+        ],
+        'bar-2' => [
+            'type' => 'bar',
+            'lot' => [
+                'bar-0' => [
+                    'lot' => [
+                        'menu-0' => [
+                            'title' => 'Menu 1',
+                            'description' => 'Default.',
+                            'url' => '/',
+                            'stack' => 10
+                        ],
+                        'menu-1' => [
+                            'current' => true,
+                            'title' => 'Menu 2',
+                            'description' => 'Current.',
+                            'url' => '/',
+                            'stack' => 20
+                        ],
+                        'menu-2' => [
+                            'active' => false,
+                            'title' => 'Menu 3',
+                            'description' => 'Disabled.',
+                            'url' => '/',
+                            'stack' => 30
+                        ],
+                        'menu-3' => [
+                            'active' => false,
+                            'current' => true,
+                            'title' => 'Menu 4',
+                            'description' => 'Current, disabled.',
+                            'url' => '/',
+                            'stack' => 40
+                        ]
+                    ]
+                ]
+            ],
+            'stack' => 30
         ]
     ];
     $_['lot']['desk']['lot']['form']['lot'][1]['lot'] = $lot;

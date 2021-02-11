@@ -56,5 +56,5 @@ Release Notes
 
 ### main
 
- - Added `field/money` field type.
+ - Added `field/money` type.
  - Added `table` type.
