@@ -1,9 +1,0 @@
----
-title: Panel GUI Test
-type: Markdown
-
-use:
-  '.\lot\x\panel': 1
-...
-
-Delete this extension to remove the test menu.
