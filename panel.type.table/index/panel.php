@@ -1,17 +1,24 @@
 <?php namespace _\lot\x\panel\type;
 
-function table(array $value, $key) {
+function table($value, $key) {
     if (empty($value['lot'])) {
         return;
     }
+    // TODO: Consider the `sort` key
+    // $sort = !empty($value['sort']);
+    // if (!\is_array($sort)) {
+    //     $sort = [$sort ? 1 : -1, 'id'];
+    // }
     $columns = [];
     $rows = [];
     foreach ($value['lot'] as $v) {
         $columns = \array_keys($v);
         $rows[] = \array_values($v);
     }
-    $out = '<table class="table">';
-    $out .= '<thead><tr><th>' . \implode('</th><th>', $columns) . '</th></tr></thead>';
+    $out = '<table class="table can:sort">';
+    $out .= '<thead>';
+    $out .= '<tr><th>' . \implode('</th><th>', $columns) . '</th></tr>';
+    $out .= '</thead>';
     $out .= '<tbody>';
     foreach ($rows as $row) {
         $out .= '<tr><td>' . \implode('</td><td>', $row) . '</td></tr>';
@@ -20,3 +27,16 @@ function table(array $value, $key) {
     $out .= '</table>';
     return $out;
 }
+
+$path = \stream_resolve_include_path(__DIR__ . \DS . '..' . \DS . 'lot' . \DS . 'asset');
+$z = \defined('DEBUG') && \DEBUG ? '.' : '.min.';
+
+$_['asset']['panel.type.table:css'] = [
+    'path' => $path . \DS . 'css' . \DS . 'index' . $z . 'css',
+    'stack' => 20.1
+];
+
+$_['asset']['panel.type.table:js'] = [
+    'path' => $path . \DS . 'js' . \DS . 'index' . $z . 'js',
+    'stack' => 20.1
+];

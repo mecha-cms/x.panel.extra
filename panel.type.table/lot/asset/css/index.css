@@ -1,0 +1,46 @@
+.table.can\:sort th {
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.table.can\:sort th::before,
+.table.can\:sort th::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  right: .5em;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  opacity: .75;
+}
+
+.table.can\:sort th::before {
+  border-bottom: 5px solid;
+  margin-top: -6px;
+}
+
+.table.can\:sort th::after {
+  border-top: 5px solid;
+  margin-top: 1px;
+}
+
+.table.can\:sort th.is\:asc::before {
+  opacity: .5;
+}
+
+.table.can\:sort th.is\:asc::after {
+  opacity: 1;
+}
+
+.table.can\:sort th.is\:desc::before {
+  opacity: 1;
+}
+
+.table.can\:sort th.is\:desc::after {
+  opacity: .5;
+}

@@ -12,19 +12,23 @@ At this time, the control panel extension already has support for several fields
  - `field/content`
  - `field/date`
  - `field/date-time`
+ - `field/description`
  - `field/email`
  - `field/hidden`
  - `field/item`
  - `field/items`
  - `field/link`
+ - `field/name`
  - `field/number`
  - `field/pass`
+ - `field/path`
  - `field/query`
  - `field/range`
  - `field/set`
  - `field/source`
  - `field/text`
  - `field/time`
+ - `field/title`
  - `field/toggle`
  - `field/u-r-l`
 
@@ -36,7 +40,6 @@ Several types of fields planned to be realized are:
 
  - [ ] `field/asset`
  - [ ] `field/code-mirror` (will be available as a separate extension)
- - [ ] `field/country`
  - [ ] `field/list`
  - [ ] `field/matrix`
  - [x] `field/money`
@@ -44,9 +47,10 @@ Several types of fields planned to be realized are:
 
 Additional GUI panels that might be worth adding:
 
- - [ ] `accordion`
+ - [ ] `cards`
  - [x] [`chart`](https://github.com/mecha-cms/x.panel.type.chart)
  - [ ] `dialog` or `window`
+ - [ ] `stacks`
  - [x] `table`
 
 ---
