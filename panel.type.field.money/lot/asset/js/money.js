@@ -39,7 +39,7 @@ function format(value, join) {
 }
 
 function onChange() {
-    let fields = document.querySelectorAll('.field\\:money .input');
+    let fields = document.querySelectorAll('.lot\\:field.type\\:money .input');
     fields.length && fields.forEach(addEvent);
 } onChange();
 

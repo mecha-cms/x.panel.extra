@@ -1,4 +1,4 @@
-<?php namespace _\lot\x\panel\type;
+<?php namespace x\panel\type;
 
 function table($value, $key) {
     if (empty($value['lot'])) {

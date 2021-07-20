@@ -8,18 +8,19 @@ At this time, the control panel extension already has support for several fields
  - `field/blobs`
  - `field/color`
  - `field/colors`
- - `field/combo`
  - `field/content`
- - `field/date`
  - `field/date-time`
+ - `field/date`
  - `field/description`
  - `field/email`
+ - `field/flex`
  - `field/hidden`
  - `field/item`
  - `field/items`
  - `field/link`
  - `field/name`
  - `field/number`
+ - `field/option`
  - `field/pass`
  - `field/path`
  - `field/query`

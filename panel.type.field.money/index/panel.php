@@ -1,4 +1,4 @@
-<?php namespace _\lot\x\panel\type\field;
+<?php namespace x\panel\type\field;
 
 function money(array $value, $key) {
     $state = \array_replace_recursive(['join' => '.'], $value['state'] ?? []);
@@ -12,16 +12,16 @@ function money(array $value, $key) {
     if (!isset($value['pattern'])) {
         $value['pattern'] = "^\\d+(?:" . \x($state['join']) . "\\d{3})*$";
     }
-    $out = \_\lot\x\panel\to\field($value, $key);
+    $out = \x\panel\to\field($value, $key);
     $out['content'][0] = 'input';
     $out['content'][1] = false;
     $out['content'][2]['name'] = ($n = $value['name'] ?? $key) . '[0]';
     $out['content'][2]['type'] = 'text';
-    \_\lot\x\panel\_set_class($out['content'][2], [
+    \x\panel\_set_class($out['content'][2], [
         'input' => true
     ]);
     $out['form'][$n . '[1]'] = $currency;
-    return \_\lot\x\panel\type\field($out, $key);
+    return \x\panel\type\field($out, $key);
 }
 
 $_['asset'][__DIR__ . DS . '..' . DS . 'lot' . DS . 'asset' . DS . 'js' . DS . 'money.js'] = [
