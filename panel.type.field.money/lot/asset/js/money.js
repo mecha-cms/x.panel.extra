@@ -6,6 +6,10 @@ function addEvent($) {
         let key = e.key,
             join = state.join || '.',
             value = parseInt(that.value.split(join).join("") || '0', 10);
+        if (!e.ctrlKey && key && 1 === key.length && !/^[0-9]$/.test(key)) {
+            e.preventDefault();
+            return;
+        }
         if (key && 'ArrowDown' === key) {
             that.value = format("" + (value + 1000), join);
             e.preventDefault();

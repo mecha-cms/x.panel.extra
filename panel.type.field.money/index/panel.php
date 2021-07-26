@@ -4,7 +4,7 @@ function money(array $value, $key) {
     $state = \array_replace_recursive(['join' => '.'], $value['state'] ?? []);
     $currency = $value['currency'] ?? null;
     if ($currency) {
-        $value['after'] = $currency;
+        $value['value-after'] = $currency;
     }
     if (!isset($value['hint'])) {
         $value['hint'] = \implode($state['join'], ['10', '000']);
@@ -20,7 +20,7 @@ function money(array $value, $key) {
     \x\panel\_set_class($out['content'][2], [
         'input' => true
     ]);
-    $out['form'][$n . '[1]'] = $currency;
+    $out['data'][$n . '[1]'] = $currency;
     return \x\panel\type\field($out, $key);
 }
 
