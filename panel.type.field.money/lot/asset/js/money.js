@@ -5,7 +5,7 @@ function addEvent($) {
             state = JSON.parse(that.getAttribute('data-state') || '{}');
         let key = e.key,
             join = state.join || '.',
-            value = parseInt(that.value.split(join).join("") || '0', 10);
+            value = parseInt(("" + that.value).split(join).join("") || '0', 10);
         if (!e.ctrlKey && key && 1 === key.length && !/^[0-9]$/.test(key)) {
             e.preventDefault();
             return;
@@ -21,7 +21,7 @@ function addEvent($) {
         } else {
             debounce && clearTimeout(debounce);
             debounce = setTimeout(() => {
-                that.value = format(that.value.split(join).join(""), join);
+                that.value = format(("" + that.value).split(join).join(""), join);
                 if (that.selectionStart === that.selectionEnd) {
                     that.selectionStart = that.selectionEnd = that.value.length;
                 }
