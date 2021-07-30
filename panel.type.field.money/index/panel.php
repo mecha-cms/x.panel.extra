@@ -33,6 +33,6 @@ function money(array $value, $key) {
 $z = \defined("\\DEBUG") && \DEBUG ? '.' : '.min.';
 $_['asset']['panel.type.field.money'] = [
     'id' => false,
-    'path' => __DIR__ . DS . '..' . DS . 'lot' . DS . 'asset' . DS . 'js' . DS . 'index' . $z . 'js',
-    'stack' => 20
+    'path' => __DIR__ . \DS . '..' . \DS . 'lot' . \DS . 'asset' . \DS . 'js' . \DS . 'index' . $z . 'js',
+    'stack' => 20.1
 ];

@@ -29,14 +29,16 @@ function table($value, $key) {
 }
 
 $path = \stream_resolve_include_path(__DIR__ . \DS . '..' . \DS . 'lot' . \DS . 'asset');
-$z = \defined('DEBUG') && \DEBUG ? '.' : '.min.';
+$z = \defined("\\DEBUG") && \DEBUG ? '.' : '.min.';
 
 $_['asset']['panel.type.table:css'] = [
+    'id' => false,
     'path' => $path . \DS . 'css' . \DS . 'index' . $z . 'css',
     'stack' => 20.1
 ];
 
 $_['asset']['panel.type.table:js'] = [
+    'id' => false,
     'path' => $path . \DS . 'js' . \DS . 'index' . $z . 'js',
     'stack' => 20.1
 ];

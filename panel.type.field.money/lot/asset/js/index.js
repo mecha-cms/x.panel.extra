@@ -1,4 +1,4 @@
-((w, d) => {
+((win, doc, _) => {
     function addEvent($) {
         let debounce;
         function onInput(e) {
@@ -15,16 +15,16 @@
                 return;
             }
             if (key && 'ArrowDown' === key) {
-                value = value + step;
-                source.value = value;
-                that.value = format("" + value, join);
-                e.preventDefault();
-            } else if (key && 'ArrowUp' === key) {
                 value = value - step;
                 if (value < 1) {
                     value = "";
                 }
                 source.value = value || '0';
+                that.value = format("" + value, join);
+                e.preventDefault();
+            } else if (key && 'ArrowUp' === key) {
+                value = value + step;
+                source.value = value;
                 that.value = format("" + value, join);
                 e.preventDefault();
             } else {
@@ -51,8 +51,8 @@
         return value;
     }
     function onChange() {
-        let fields = document.querySelectorAll('.lot\\:field.type\\:money .input[data-name]');
+        let fields = doc.querySelectorAll('.lot\\:field.type\\:money .input[data-name]');
         fields.length && fields.forEach(addEvent);
     } onChange();
     _.on('change', onChange);
-})(window, document);
+})(window, document, _);
