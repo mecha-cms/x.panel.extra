@@ -16,16 +16,11 @@ function money(array $value, $key) {
     if (!isset($value['pattern'])) {
         $value['pattern'] = "^\\d+(?:" . \x($state['join']) . "\\d{3})*$";
     }
-    $out = \x\panel\to\field($value, $key);
-    $out['content'][0] = 'input';
-    $out['content'][1] = false;
-    $out['content'][2]['type'] = 'text';
-    $out['content'][2]['value'] = $vv;
-    \x\panel\_set_class($out['content'][2], [
-        'input' => true
-    ]);
-    unset($out['content'][2]['name']);
-    $out['content'][2]['data-name'] = ($n = $value['name'] ?? $key);
+    $out = \x\panel\to\field($value, $key, 'input');
+    $out['field'][2]['type'] = 'text';
+    $out['field'][2]['value'] = $vv;
+    unset($out['field'][2]['name']);
+    $out['field'][2]['data-name'] = ($n = $value['name'] ?? $key);
     $out['data'][$n] = [$v, $currency];
     return \x\panel\type\field($out, $key);
 }
