@@ -1,5 +1,5 @@
-Custom GUI Proposal for [Panel](https://github.com/mecha-cms/x.panel)
-=====================================================================
+Custom GUI Proposal for Mecha&rsquo;s [Panel](https://github.com/mecha-cms/x.panel)
+===================================================================================
 
 At this time, the control panel extension already has support for several fields that added to follow the development of standards HTML5 form elements. These fields can still work without JavaScript and therefore I provide them in the control panel extension as the default fields:
 
