@@ -3,9 +3,10 @@ Custom GUI Proposal for Mecha&rsquo;s [Panel](https://github.com/mecha-cms/x.pan
 
 At this time, the control panel extension already has support for several fields that added to follow the development of standards HTML5 form elements. These fields can still work without JavaScript and therefore I provide them in the control panel extension as the default fields:
 
- - `field` (unknown field type)
  - `field/blob`
  - `field/blobs`
+ - `field/button`
+ - `field/buttons`
  - `field/color`
  - `field/colors`
  - `field/content`
@@ -32,6 +33,7 @@ At this time, the control panel extension already has support for several fields
  - `field/title`
  - `field/toggle`
  - `field/u-r-l`
+ - `field` (unknown field type)
 
 In some cases, developers may need certain fields to create unique types of websites. For example, they might need a field with type of `money` to support currency input because they want to create an online store using Mecha. Although this can be handled by the default `text` field, providing currency units and validating numbers can be a problem for clients.
 
